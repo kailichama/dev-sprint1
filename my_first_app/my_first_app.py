@@ -1,8 +1,13 @@
 # This is whre you can start you python file for your week1 web app
 # Name: Kelly Chiang
 
+
+#unsafe for practical use 
 import flask, flask.views
+import os #specifically do OS things, cant import things after eval? 
 app = flask.Flask(__name__)
+
+app.secret_key = "123piggypig@" #need secret key to code the data between user and webserver browsers, make the key hard to crack
 
 class View(flask.views.MethodView):
 	def get(self):   
