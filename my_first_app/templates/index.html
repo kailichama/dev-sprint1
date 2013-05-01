@@ -9,10 +9,7 @@
 				<input type="text" name="expression" /> <!--textbox with the name "expression" --> 
 				<input type="submit" value="Execute" />
 		</form>
-
-		<!-- flashing is a way to send messages to users in same session 
-		Jinja2 template-->
-		{% with messages = get_flashed_messages() %}
+		{% with messages = get_flashed_messages() %} <!-- flashing is a way to send messages to users in same session Jinja2 template-->
 			{% if messages %}
 				Results:
 				<pre>
@@ -20,7 +17,7 @@
 {{message}}
 					{% endfor %} <!-- ends forloop -->
 				</pre>
-				{% endif %} <!-- ends forloop -->
-			{% endwith %}  <!-- ends forloop -->
+			{% endif %} <!-- ends forloop -->
+		{% endwith %}  <!-- ends forloop -->
 	</body>
 </html>	
